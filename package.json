@@ -1,0 +1,19 @@
+{
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "ltijs": "^5.4.4",
+    "next": "9.5.3",
+    "next-session": "^3.3.2",
+    "openid-client": "^4.2.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}

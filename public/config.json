@@ -1,0 +1,65 @@
+{
+  "title":"GrumpyCat LTI",
+  "description":"LTI 1.3 Cat Tool for Testing.",
+  "privacy_level":"public",
+  "oidc_initiation_url":"https://grumpycat.docker/api/lti",
+  "target_link_uri":"https://grumpycat.docker",
+  "scopes":[
+    "https://purl.imsglobal.org/spec/lti-ags/scope/lineitem",
+    "https://purl.imsglobal.org/spec/lti-ags/scope/lineitem.readonly",
+    "https://purl.imsglobal.org/spec/lti-ags/scope/result.readonly",
+    "https://purl.imsglobal.org/spec/lti-ags/scope/score"
+  ],
+  "extensions":[
+     {
+        "domain":"grumpycat.docker",
+        "tool_id":"grumpycat-lti",
+        "platform":"canvas.instructure.com",
+        "settings":{
+           "text":"GrumpyCat",
+           "icon_url":"https://grumpycat.docker/favicon.png",
+           "placements":[
+              {
+                 "text":"GrumpyCat",
+                 "enabled":true,
+                 "placement":"course_navigation",
+                 "message_type":"LtiResourceLinkRequest"
+              },
+              {
+                 "text":"Choose GrumpyCat Assignment",
+                 "enabled":true,
+                 "placement":"assignment_selection",
+                 "message_type":"LtiDeepLinkingRequest",
+                 "target_link_uri":"https://grumpycat.docker/selectAssignment"
+              },
+              {
+                "text":"Add GrumpyCat",
+                "enabled":true,
+                "placement":"editor_button",
+                "message_type":"LtiDeepLinkingRequest",
+                "target_link_uri":"https://grumpycat.docker/selectLink?format=image"
+             },
+             {
+              "text":"GrumpyCat",
+              "enabled":true,
+              "placement":"link_selection",
+              "message_type":"LtiDeepLinkingRequest",
+              "target_link_uri":"https://grumpycat.docker/selectLink?format=page"
+             }
+           ]
+        }
+     }
+  ],
+  "public_jwk": {
+    "e": "AQAB",
+    "n": "hunuuwiacgFRP7Bu3tvXrTgvYL_1C0Qxkf5GQWRY32f2Syh4qa9HAPyx-ilAaNWZr_Yxw8aC9NyJ5tHOQdWvu6Wmscpq59N_melLLpaTz6NgSWZF1TNh9BUvJ5Jw6HYdVQL3XBIGAkHvj61X0PLPSQ_YmtLZKA4NFeHkbjU_BdemOjmRd3kPq7nvmXYBVGyj-NmXu1rrrWc80gDf8RTwpVaAmGtLnSRW6EVxfM60oOhJIHM86-SVuj6TyI508jTupNQMrU1tW5ERg5r_d0NgJYaVLd8jGuVScuEh7iJuewNNXnnmEphJ8kUYwxOeNtPX4QlY5W8RdqL2mA_TfZ_xnQ",
+    "alg": "RS256",
+    "kid": "1XtdFkClDLA1SvPl1bSziBmsH7lgfv9YtI3-7kpvCHI",
+    "kty": "RSA",
+    "use": "sig"
+  },
+  "custom_fields": {
+    "userid": "$Canvas.user.loginId",
+    "username": "$Person.name.display"
+  }
+}

@@ -1,0 +1,56 @@
+version: '2'
+
+services:
+  web:
+    image: instructure/node:12
+    environment:
+      VIRTUAL_HOST: 'grumpycat.docker'
+      VIRTUAL_PORT: 3000
+      CANVAS_CLIENT_ID: 10000000000003
+      CANVAS_CLIENT_SECRET: 2wPCBrlT7x5LvC4QIid5HMpBr9E74ZP19FSXpVKhprjcrHhJ2C0Q1God9FPW7R5h
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
+      PRIVATE_KEY: |
+        -----BEGIN PRIVATE KEY-----
+        MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCG6e67CJpyAVE/
+        sG7e29etOC9gv/ULRDGR/kZBZFjfZ/ZLKHipr0cA/LH6KUBo1Zmv9jHDxoL03Inm
+        0c5B1a+7paaxymrn03+Z6UsulpPPo2BJZkXVM2H0FS8nknDodh1VAvdcEgYCQe+P
+        rVfQ8s9JD9ia0tkoDg0V4eRuNT8F16Y6OZF3eQ+rue+ZdgFUbKP42Ze7WuutZzzS
+        AN/xFPClVoCYa0udJFboRXF8zrSg6Ekgczzr5JW6PpPIjnTyNO6k1AytTW1bkRGD
+        mv93Q2AlhpUt3yMa5VJy4SHuIm57A01eeeYSmEnyRRjDE54209fhCVjlbxF2ovaY
+        D9N9n/GdAgMBAAECggEAMDbX3zWC5G0+GRG3faN5X2kt3VicfQtA39jMSMBQ1n4z
+        0cZD4PhH2r1z6V/mqdB0HSNRw5Jk6JcMHVYrbPGt3NSlTvJ05CZ8eoeaG6sqZdEQ
+        LwsCt9+mCPGtKWo3OYxEjUYDGn9CcHoZ3/Hl6UFs/MJR+XqSqrLi0EgrN4uF21Mh
+        tZAF4zFSj8e8OXHIixKDSNqeIvxNUFqcjFNlTMuMxeRskvZ0lYd2GBl5yjyXm/lZ
+        FruPjcFZ3DtHLXd9ebrBQ7Icu0ueNxCh0+LY7dttuK6r0wYbEut3SybQUQ5i1xnU
+        HessbSZZ4iXBKETAdPZRGxfDEoCR4NX3C9qqm4C0DQKBgQDLB8o4Bo/6XYBTsM26
+        ls2SwDsF8kK8/T3BB3sj704qDBfpQGUusuP8ItM2qwPuAVbmgx4dE2qGPuM6rnGo
+        EDX47LFJeIo4IPOxyAYyVJDZF9ac0KhheHk+/xcYxgPakdcrNTBSZCPGVgkhkkox
+        8bqyDYY8hGdYDn8t45wO/rCfkwKBgQCqHLKIjG5LUoGpcxccPrrsw6/+GUvx/t9V
+        QyO51zRQS2KoAieWMAT2jjsQwG41VKxtHiaRoJGsnEF14mo+GNpX26qRTfbQxX9h
+        2Pn/Il2U1d9nA/ffeVyhCZaw1HNmBRTLdBd1GENyhUudUiWzNgnmL2e3slK8M1ZA
+        MpSvTM4IDwKBgAlUvlJ82rki+vbdtVbR/3izJQNM8wxEh0YL1fj80pbUH3U05HGU
+        /y1jXFmy2mdh4GCPvh6P+eFZmo/j3I1g0VozZqJ9y7xwp0KQcth1UoLnuZFTdaml
+        I81lY+Zbk2nEMiNmOmZO++XtplXIp2hMN8xfGsBFRYqif+3X/CAkTHHJAoGAVTSO
+        kCqWzA+FdpR5DOK2ygSyUDnnekzJHHHGoT0TrOw1fCWoImfm9IAFQbzA9uF0hCtH
+        8kVU8fpKJ3vC71uPcdZLNwCwEZ360c3WWl6iNPxzK6wnKb4mEVs2KVggfQcqhUWe
+        wj3m+qOdXi1ZSMxWZP91meMt4aptFza+lpeH0y0CgYEAlD39a2y8MtjH92URRq6c
+        yYl/HyxZwXHS5dLFiX8PdpOiJzHVjwLX4Meax8vJsBhtrxiIosDDihKdh6JKGmod
+        Z7wA6Qug/JqLMq79XivL+P+lXMEgNYZ1cPhqagKsLuMO7h6qpAVj1hFTEZn4rMp8
+        WU2MUga3UsxNNDPSc6RZfSQ=
+        -----END PRIVATE KEY-----
+
+      PUBLIC_KEY: |
+        -----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhunuuwiacgFRP7Bu3tvX
+        rTgvYL/1C0Qxkf5GQWRY32f2Syh4qa9HAPyx+ilAaNWZr/Yxw8aC9NyJ5tHOQdWv
+        u6Wmscpq59N/melLLpaTz6NgSWZF1TNh9BUvJ5Jw6HYdVQL3XBIGAkHvj61X0PLP
+        SQ/YmtLZKA4NFeHkbjU/BdemOjmRd3kPq7nvmXYBVGyj+NmXu1rrrWc80gDf8RTw
+        pVaAmGtLnSRW6EVxfM60oOhJIHM86+SVuj6TyI508jTupNQMrU1tW5ERg5r/d0Ng
+        JYaVLd8jGuVScuEh7iJuewNNXnnmEphJ8kUYwxOeNtPX4QlY5W8RdqL2mA/TfZ/x
+        nQIDAQAB
+        -----END PUBLIC KEY-----
+    ports:
+      - 3000
+    volumes:
+      - .:/usr/src/app
+    command: npm run dev -- . --hostname 0.0.0.0
