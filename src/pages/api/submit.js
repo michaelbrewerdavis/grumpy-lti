@@ -56,7 +56,7 @@ async function handler(req, res) {
     const scoreJson = await scoreResponse.json()
     console.log(scoreJson)
     if (returnUrl) {
-      res.redirect(307, returnUrl)
+      res.redirect(303, returnUrl)
     } else {
       res.json({submitted: true})
     }
